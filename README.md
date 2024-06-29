@@ -22,8 +22,8 @@ Before you begin, ensure you have met the following requirements:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/ai-debate-simulator.git
-   cd ai-debate-simulator
+   git clone https://github.com/yourusername/ai-debate.git
+   cd ai-debate
    ```
 
 2. Install the required packages:
@@ -36,8 +36,8 @@ Before you begin, ensure you have met the following requirements:
    Create a `.env` file in the project root and add your API keys:
 
    ```bash
-   OPENAI_API_KEY=your_openai_api_key_here
-   ANTHROPIC_API_KEY=your_anthropic_api_key_here
+   OPENAI_API_KEY='your_openai_api_key_here'
+   ANTHROPIC_API_KEY='your_anthropic_api_key_here'
    ```
 
 ## Usage
@@ -57,7 +57,7 @@ Follow the prompts to:
 
 ## Sample Debate
 
-```bash
+```console
 Enter the debate topic: Is artificial intelligence a threat to humanity?
 
 Round 1
