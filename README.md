@@ -22,8 +22,8 @@ Before you begin, ensure you have met the following requirements:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/debate-ai.git
-   cd ai-debate
+   git clone https://github.com/starolis/debate-ai.git
+   cd debate-ai
    ```
 
 2. Install the required packages:
