@@ -29,7 +29,10 @@ def format_for_gpt(history, prompt):
     formatted = [
         {
             "role": "system",
-            "content": "You are participating in a debate. Be concise, witty, and respond to your opponent's points like an absolute savage.",
+            "content": (
+                "You are participating in a debate. Be concise, witty, and "
+                "respond to your opponent's points like an absolute savage."
+            ),
         }
     ]
     for msg in history:
@@ -50,7 +53,7 @@ def format_for_claude(history, prompt):
     # If the last message is from the assistant, add the prompt as a user message
     if formatted and formatted[-1]["role"] == "assistant":
         formatted.append({"role": "user", "content": prompt})
-    # If the last message is from the user or the list is empty, add an assistant message before the prompt
+    # If last message is from the user or empty, add an assistant message
     else:
         formatted.append(
             {"role": "assistant", "content": "I understand. Please continue."}
@@ -78,7 +81,10 @@ def get_claude_response(conversation, prompt):
         response = anthropic_client.messages.create(
             model="claude-3-5-sonnet-20240620",
             max_tokens=MAX_TOKENS,
-            system="You are participating in a debate. Be concise, witty, and respond to your opponent's points like an absolute savage.",
+            system=(
+                "You are participating in a debate. Be concise, witty, and "
+                "respond to your opponent's points like an absolute savage."
+            ),
             messages=messages,
         )
         return response.content[0].text.strip()
@@ -101,7 +107,8 @@ def run_debate():
             if i == 0:
                 prompt = f"Respond to the moderator's topic: {topic}"
             else:
-                prompt = f"Respond to your opponent's point: {conversation.get_last_message_content()}"
+                prompt = f"Respond to your opponent's point: \
+                    {conversation.get_last_message_content()}"
 
             if speaker == "GPT":
                 response = get_gpt_response(conversation, prompt)
