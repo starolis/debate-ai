@@ -82,7 +82,7 @@ Moderator: Should AI be regulated?
 You can adjust the following parameters in the `debate_ai.py` file:
 
 - `MAX_TOKENS`: Maximum number of tokens for AI responses
-- AI models used (currently set to GPT-4 and Claude)
+- AI models used (currently set to GPT-4o and Claude 3.5 Sonnet)
 - System prompts for each AI to set the debate tone
 
 ## Contributing
