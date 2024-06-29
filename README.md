@@ -95,7 +95,7 @@ Contributions to the AI Debate Simulator are welcome! Here's how you can contrib
 4. Push to the branch: `git push origin feature-branch-name`
 5. Submit a pull request
 
-Please make sure to update tests as appropriate and adhere to the project's coding standards.
+Our project follows the coding standards enforced by [Black](https://github.com/psf/black), the uncompromising Python code formatter. To ensure consistency in code style, please format your code using Black before submitting any changes.
 
 ## License
 
